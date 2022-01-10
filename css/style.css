@@ -78,17 +78,76 @@ nav {
 
 nav h3 {
     font-weight: 200;
-    font-size: 20;
+    font-size: 18px;
+    width: 120px;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 nav ul a {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--light-green);
     text-decoration: none;
-    margin: 0 35px;
 }
 
-section {
-    height: 1000px;
-    background-color: purple;
+nav ul a svg {
+    display: none;
+}
+
+
+/* RESPONSIVIDADE */
+
+/* SMALL DESKTOPS */
+@media (max-width: 1000px) {
+    header .container {
+        width: 100%;
+    }
+
+    nav ul a {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+}
+
+/* tablet */
+@media (max-width: 767px) {
+
+    nav h3 {
+        display: none;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul a {
+        font-size: 16px;
+    }
+}
+
+/* celular */
+@media (max-width: 480px) {
+    header .container {
+        padding: 0 40px;
+    }
+
+    nav {
+        padding: 0 15px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    nav ul a svg {
+        display: block;
+        margin: 0 auto 10px;
+    }
 }
